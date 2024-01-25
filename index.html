@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="wrapper">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h2 class="text-center mb-4"> CANTEEN CALCULATOR </h2>
+                </div>
+
+                <div class="col-lg-3">
+                    <label class="form-check-label" for="chkTEA">
+                        1.TEA - ₹ 10 / cup
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="chkTEA" class="form-control"
+                        onclick="TEAchecked(this)">
+                </div>
+    
+                <div class="col-lg-3">
+                    <label class="form-check-label" for="chkCOFFEE">
+                        2.COFFEE - ₹ 20 / cup
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="chkCOFFEE" class="form-control"
+                        onclick="COFFEEchecked(this)">
+                </div>
+    
+                <div class="col-lg-3">
+                    <label class="form-check-label" for="chkPATTIES">
+                        3.PATTIES - ₹ 30 / peice
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="chkPATTIES" class="form-control"
+                        onclick="PATTIESchecked(this)">
+                </div>
+    
+                <div class="col-lg-3">
+                    <label class="form-check-label" for="chkMOMOS">
+                        4.MOMOS - ₹ 40 / plate
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="chkMOMOS" class="form-control"
+                        onclick="MOMOSchecked(this)">
+                </div>
+
+            </div>
+
+            <div class="row mt-3">
+
+                <div class="col-lg-12">
+                    <div class="inputWrapper mb-3">
+                        <div id="divTEA" style="display:none">
+                            <input type="text" value="TEA" readonly="">
+                            <input type="text" value=" ₹ 10 / cup " readonly="">
+                            <input type="text" placeholder="Enter Qnty" id="s1" onkeyup="TEAtotal()"> = ₹
+                            <input type="text" id="s2" readonly="">
+                        </div>            
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="inputWrapper mb-3">
+                        <div id="divCOFFEE" style="display:none">
+                            <input type="text" value="COFFEE" readonly="">
+                            <input type="text" value=" ₹  20 / cup " readonly="">
+                            <input type="text" placeholder="Enter Qnty" id="p1" onkeyup="COFFEEtotal()"> = ₹
+                            <input type="text" id="p2" readonly="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="inputWrapper mb-3">
+                        <div id="divPATTIES" style="display:none">
+                            <input type="text" value="PATTIES" readonly="">
+                            <input type="text" value=" ₹  30 / peice " readonly="">
+                            <input type="text" placeholder="Enter Qnty" id="b1" onkeyup="PATTIEStotal()"> = ₹
+                            <input type="text" id="b2" readonly="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="inputWrapper mb-3">
+                        <div id="divMOMOS" style="display:none">
+                            <input type="text" value="MOMOS" readonly="">
+                            <input type="text" value=" ₹  40 / plate " readonly="">
+                            <input type="text" placeholder="Enter Qnty" id="sa1" onkeyup="MOMOStotal()"> = ₹
+                            <input type="text" id="sa2" readonly="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h3> Grand Total : ₹ <label id="grandtotal"></label></h3>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
